@@ -172,10 +172,13 @@ If you use GeoNeXt in your research, please cite our work:
 ```bibtex
 @article{uribe2025geonext,
   title={GeoNeXt: Efficient landslide mapping using a pre-trained ConvNeXt V2 encoder with a PSA-ASPP decoder},
-  author={Uribe-Ventura, Rodrigo and Viveen, Willem and Pineda-Ancco, Ferdinand and Beltrán-Castallon, César},
-  journal={Under Review},
-  year={2025}
+  author={Uribe-Ventura, Rodrigo and Viveen, Willem and Pineda-Ancco, Ferdinand and Beltr{\'a}n-Casta{\~n}on, C{\'e}sar},
+  journal={Artificial Intelligence in Geosciences},
+  year={2025},
+  publisher={Elsevier},
+  doi={10.1016/j.aiig.2025.100172}
 }
+
 ```
 
 *Paper currently under review. BibTeX entry will be updated upon publication.* 
