@@ -45,8 +45,8 @@ pip install -r requirements.txt
 Download the following required folders from Google Drive:
 
 - **Pre-trained Weights**: [Download pretrained folder](https://drive.google.com/file/d/1uz7Y_2zpBiR54c_p_DQm1QDwql_Lzrh4/view?usp=sharing)
-- **Trained Models**: [Download experiments folder](https://drive.google.com/file/d/11N16l2eXEn0YWJ3S1pFC-kSAAcn9HlBN/view?usp=drive_link)
-- **Datasets**: [Download dataset folder](https://drive.google.com/file/d/1lHKEfCMBnR93dGvuT4_1m4XPWRJc5Psz/view?usp=drive_link)
+- **Trained Models**: [Download experiments folder](https://drive.google.com/file/d/19JOvbY450amh0WNTdr7FHn3KQxSj8Zjm/view?usp=drive_link)
+- **Datasets**: [Download dataset folder](https://drive.google.com/file/d/1zGVRovTexPGf7VKb4BlVi6XiSVIDhasy/view?usp=drive_link)
 
 Extract these folders in the root directory of the project to maintain the proper structure.
 
@@ -103,7 +103,7 @@ We provide ready-to-use Jupyter notebooks:
 
 ### Data Preparation
 
-1. Download the complete dataset folder from [this link](https://drive.google.com/file/d/1lHKEfCMBnR93dGvuT4_1m4XPWRJc5Psz/view?usp=drive_link)
+1. Download the complete dataset folder from [this link](https://drive.google.com/file/d/1zGVRovTexPGf7VKb4BlVi6XiSVIDhasy/view?usp=drive_link)
 2. Extract and place in the project root directory
 3. The structure should be:
 ```
@@ -153,13 +153,18 @@ Pre-trained models and weights are available in the downloads section:
   - Location: pretrained folder
   
 - **GeoNeXt Complete Models**: Fine-tuned models for each dataset
-  - **BJL Dataset**: `GeoNeXt_BJL/best_model.pth.tar` (F1: 94.25%)
-  - **L4S Dataset**: `GeoNeXt_L4S/best_model.pth.tar` (F1: 86.43%)
-  - **GVLM Dataset**: `GeoNeXt_GVLM/best_model.pth.tar` (F1: 92.27%)
-  - **CAS Domain-adapted**: `GeoNeXt_CAS/encoder_weights.pth` 
+  - **BJL Dataset**: `GeoNeXt_BJL/best_model.pth.tar` (F1: 93.98%)
+  - **L4S Dataset**: `GeoNeXt_L4S/best_model.pth.tar` (F1: 86.47%)
+  - **GVLM Dataset**: `GeoNeXt_GVLM/best_model.pth.tar` (F1: 92.19%)
+  - **CAS Domain-adapted**: `GeoNeXt_CAS/encoder_weights.pth`
+  - **CAS initialiser**: `GeoNeXt_CAS_adapted/best_model.pth.tar` (loaded by `train.ipynb`)
   - Location: experiments folder
 
-Download the [pretrained folder](https://drive.google.com/file/d/1uz7Y_2zpBiR54c_p_DQm1QDwql_Lzrh4/view?usp=sharing) and [experiments folder](https://drive.google.com/file/d/11N16l2eXEn0YWJ3S1pFC-kSAAcn9HlBN/view?usp=drive_link) to access all pre-trained models and weights.
+  The F1 values above are those measured for the released checkpoints with
+  `utils/benchmarks.py`; they reproduce the paper's 94.25% / 86.43% / 92.27%
+  to within 0.27 points.
+
+Download the [pretrained folder](https://drive.google.com/file/d/1uz7Y_2zpBiR54c_p_DQm1QDwql_Lzrh4/view?usp=sharing) and [experiments folder](https://drive.google.com/file/d/19JOvbY450amh0WNTdr7FHn3KQxSj8Zjm/view?usp=drive_link) to access all pre-trained models and weights.
 
 ## License
 

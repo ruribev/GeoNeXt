@@ -73,7 +73,15 @@ class TrainingExperiment:
         print(f"Loading pretrained model: {path}")
         
         try:
-            checkpoint = torch.load(path, map_location=self.device)
+            # torch >= 2.6 defaults weights_only=True, which rejects the numpy
+            # scalars stored in this checkpoint's training history. Mirror the
+            # fallback used in utils/benchmarks.py.
+            try:
+                checkpoint = torch.load(path, map_location=self.device,
+                                        weights_only=True)
+            except Exception:
+                checkpoint = torch.load(path, map_location=self.device,
+                                        weights_only=False)
             state_dict = checkpoint.get('state_dict', checkpoint.get('model', checkpoint))
             
             # Handle encoder-only loading
